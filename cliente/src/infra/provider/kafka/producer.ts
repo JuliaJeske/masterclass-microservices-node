@@ -7,6 +7,8 @@ export class kafkaSendMessage {
     });
 
     await producer.connect();
+    console.log(`MESSAGE SEND TO TOPIC ${topic}`);
+    console.log(payload);
     await producer.send({
       topic,
       messages: [

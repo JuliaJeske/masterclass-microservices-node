@@ -19,11 +19,3 @@ model Client {
 
   @@map("clients")
 }
-
-model Customer {
-  id        String @id @default(uuid())
-  extenalId String
-  email     String @unique
-
-  @@map("customers")
-}
